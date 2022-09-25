@@ -45,4 +45,7 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+var listener = app.listen(process.env.PORT, function () {
+  console.log("Listening on port " + listener.address().port); //Listening on port 8888
+});
 module.exports = app;
